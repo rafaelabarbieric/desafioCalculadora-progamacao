@@ -10,48 +10,50 @@
 
 <body>
 
-    <table class="calculator">
+    <div class="calculator">
 
-        <tr class="teste">
-            <td colspan="4"><input id="display" placeholder="0" disabled></td>
-        </tr>
-        <tr class="teste">
-            <td colspan="4"><h2 id="history"></h2></td>
-        </tr>
-        
-        <tr class="row">
-            <td colspan="3" class="button"><button id="purple" class="button purple-text" onclick="limpar()">AC</button></td>
-            <td class="button-purple"><button class="button-purple gray" onclick="add_operador('/')">/</button></td>
-        </tr>
+        <div class="espaco">
+            <input id="display" placeholder="0" disabled>
+        </div>
 
-        <tr class="row">
-            <td class="button"><button class="button" onclick="add_numero(7)">7</button></td>
-            <td class="button"><button class="button" onclick="add_numero(8)">8</button></td>
-            <td class="button"><button class="button" onclick="add_numero(9)">9</button></td>
-            <td class="button-purple"><button class="button-purple gray" onclick="add_operador('*')">*</button></td>
-        </tr>
+        <div class="espaco">
+            <h2 id="history"></h2>
+        </div>
 
-        <div class="row">
-            <td class="button"><button class="button" onclick="add_numero(4)">4</button></td>
-            <td class="button"><button class="button" onclick="add_numero(5)">5</button></td>
-            <td class="button"><button class="button" onclick="add_numero(6)">6</button></td>
-            <td class="button-purple"><button class="button-purple gray color" onclick="add_operador('-')">-</button></td>
-        </tr>
+        <div class="espaco">
+            <button id="especial" class="button purple-text" onclick="limpar()">AC</button>
+            <button class="button-purple gray" onclick="add_operador('/')">/</button>
+        </div>
 
-        <tr class="row">
-            <td class="button"><button class="button" onclick="add_numero(1)">1</button></td>
-            <td class="button"><button class="button" onclick="add_numero(2)">2</button></td>
-            <td class="button"><button class="button" onclick="add_numero(3)">3</button></td>
-            <td class="button-purple"><button class="button-purple gray" onclick="add_operador('+')">+</button></td>
-        </tr>
 
-        <tr class="row">
-            <td colspan="2" class="button"><button class="button" onclick="add_numero(0)">0</button></td>
-            <td class="button"><button class="button" onclick="add_numero('.')">.</button></td>
-            <td class="button-purple"><button class="button-purple" onclick="total()">=</button></td>
-        </tr>
+        <div class="espaco">
+            <button class="button" onclick="add_numero(7)">7</button>
+            <button class="button" onclick="add_numero(8)">8</button>
+            <button class="button" onclick="add_numero(9)">9</button>
+            <button class="button-purple gray" onclick="add_operador('*')">*</button>
+        </div>
 
-    </table>
+        <div class="espaco">
+            <button class="button" onclick="add_numero(4)">4</button>
+            <button class="button" onclick="add_numero(5)">5</button>
+            <button class="button" onclick="add_numero(6)">6</button>
+            <button class="button-purple gray color" onclick="add_operador('-')">-</button>
+        </div>
+
+        <div class="espaco">
+            <button class="button" onclick="add_numero(1)">1</button>
+            <button class="button" onclick="add_numero(2)">2</button>
+            <button class="button" onclick="add_numero(3)">3</button>
+            <button class="button-purple gray" onclick="add_operador('+')">+</button>
+        </div>
+
+        <div class="espaco">
+            <button id="especial2" class="button" onclick="add_numero(0)">0</button>
+            <button class="button" onclick="add_numero('.')">.</button>
+            <button class="button-purple" onclick="total()" id="btnTotal">=</button>
+        </div>
+
+    </div>
     <script type="text/javascript" src="script.js"></script>
 </body>
 
