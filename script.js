@@ -1,4 +1,5 @@
-let conta = document.querySelector("#display")
+let conta = document.querySelector("#display");
+let btntotal = document.querySelector("#total");
 let operador;
 
 function add_numero(n) {
@@ -20,10 +21,13 @@ document.addEventListener('keydown', function(event) {
     if (event.key == 'Enter') {
         total();
     }
+    if (event.key == "Backspace" || event.key == "delete" || event.key == "Escape") {
+        limpar();
+    }
 })
 
+let contaAnterior = document.querySelector("#history");
 function total(){
-    let contaAnterior = document.querySelector("#history");
     contaAnterior.innerHTML = conta.value;
 
     numero = conta.value.split(operador);
@@ -49,5 +53,6 @@ function total(){
 
 function limpar(){
     conta.value = "";
+    contaAnterior.innerHTML = "";
 }
 
