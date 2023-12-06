@@ -1,21 +1,21 @@
 let conta = document.querySelector("#display")
 let operador;
-let btnTotal = document.querySelector("#btnTotal");
 
 function add_numero(n) {
     conta.value = conta.value + n;
-    btnTotal.focus();
 }
 
 function add_operador(op) {
     conta.value = conta.value + op;
     operador = op;
-    btnTotal.focus();
 }
 
 document.addEventListener('keydown', function(event) {
     if (isNaN(event.key) == false || event.key == "/" || event.key == "*" || event.key == "+" || event.key == "-") {
         conta.value = conta.value + event.key;
+    }
+    if((event.key).includes("/") == true || (event.key).includes("*") || (event.key).includes("+") || (event.key).includes("-")){
+        operador = event.key;
     }
     if (event.key == 'Enter') {
         total();
